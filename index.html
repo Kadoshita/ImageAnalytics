@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ImageAnalytics</title>
+	<style>
+		canvas{
+			background-color: #fff;
+			border: solid 2px black;
+		}
+		#img1{
+			position: relative;
+			display: inline-block;
+		}
+		#canvas1-text{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			color: white;
+			background-color: rgba(0,0,0,0.4);
+		}
+		#img2{
+			position: relative;
+			display: inline-block;
+		}
+		#canvas2-text{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			color: white;
+			background-color: rgba(0,0,0,0.4);
+		}
+		#img3{
+			position: relative;
+			display: inline-block;
+		}
+		#canvas3-text{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			color: white;
+			background-color: rgba(0,0,0,0.4);
+		}
+		#buttons{
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			right: 0px;
+			background-color: rgba(255,255,255,0.4);
+		}
+	</style>
+	<script>
+		/* Imageオブジェクトを生成 */
+		var img = new Image();
+		img.src = 'data1.png';
+	</script>
+</head>
+<body>
+<div id="img1">
+	<p id="canvas1-text">元画像</p>
+	<canvas id="canvas1"></canvas>
+</div>
+
+<div id="img3">
+	<p id="canvas3-text"></p>
+	<canvas id="canvas3"></canvas>
+	<div id="buttons">
+		<button onclick="rresult()">赤を検出</button>
+		<button onclick="gresult()">緑を検出</button>
+		<button onclick="bresult()">青を検出</button><br>
+		<label>
+			赤レベル:<input type="range" name="range" value="0" max="255" id="rlev">
+			<span id="rval"></span>
+		</label><br>
+		<label>
+			緑レベル:<input type="range" name="range" value="0" max="255" id="glev">
+			<span id="gval"></span></label>
+		<br>
+		<label>
+			青レベル:<input type="range" name="range" value="0" max="255" id="blev">
+			<span id="bval"></span>
+		</label>
+	</div>
+</div>
+
+<div id="img2">
+	<p id="canvas2-text">2値化画像</p>
+	<canvas id="canvas2"></canvas>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
