@@ -1,4 +1,4 @@
-var THRESHOLD =128;
+var THRESHOLD =140;
 var REDLEVEL=128;
 var GREENLEVEL=100;
 var BLUELEVEL=128;
@@ -19,17 +19,17 @@ var canvas3_text=document.getElementById('canvas3-text');
 
 var rlev = document.getElementById('rlev');
 var rval = document.getElementById('rval');
-rlev.addEventListener("input", function() {
+rlev.addEventListener('input', function() {
 	selectRed();
 }, false);
 var glev = document.getElementById('glev');
 var gval = document.getElementById('gval');
-glev.addEventListener("input", function() {
+glev.addEventListener('input', function() {
 	selectGreen();
 }, false);
 var blev = document.getElementById('blev');
 var bval = document.getElementById('bval');
-blev.addEventListener("input", function() {
+blev.addEventListener('input', function() {
 	selectBlue();
 }, false);
 
